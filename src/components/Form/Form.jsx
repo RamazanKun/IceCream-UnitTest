@@ -1,0 +1,32 @@
+import { useState } from 'react'
+
+const Form = () => {
+
+  const [isChecked, setIsChecked] = useState(false)
+  const [isHover, setIsHover] = useState(false)
+
+  return (
+    <div className='d-flex justify-content-center align-items-center gap-3 my-5'>
+   
+      <input onChange={(e) => setIsChecked(e.target.checked)}
+        id='terms'
+        type='checkbox'
+        className='form-check-input' />
+
+      <div className='terms'>
+        <p className='bg-light text-black p-1 rounded shadow' style={{ visibility: isHover ? 'visible' : 'hidden' }}>Size Bir Şey Teslim Etmeyeceğiz</p>
+        <label htmlFor="terms">Koşulları okudum ve kabul ediyorum</label>
+      </div>
+
+      <button
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
+        disabled={!isChecked}
+        className='btn btn-warning '>
+        Siparişi Onayla
+      </button>
+    </div>
+  )
+}
+
+export default Form;
