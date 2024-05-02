@@ -1,4 +1,4 @@
-﻿<h1>ICE Cream</h1>
+﻿<h1>Ice Cream Menu</h1>
 <h4> unit-test focused ice cream menu project/ unit-test odaklı bir dondurma menüsü </h4>
 
 
